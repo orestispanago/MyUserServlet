@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package services;
+package dao;
 
 import entities.User;
 import java.util.List;
@@ -12,9 +12,8 @@ import java.util.List;
  *
  * @author mac
  */
-public interface IUser {
+public interface IUserDao {
     User findById(int id);
     List<User> findAll();
     boolean deleteById(int id);
-    
 }

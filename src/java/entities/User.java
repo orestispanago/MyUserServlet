@@ -3,16 +3,33 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package models;
+package entities;
+
+import java.io.Serializable;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 /**
  *
  * @author mac
  */
-public class User {
+@Entity
+@Table(name="Users")
+public class User implements Serializable {
+    @Id
+    private long id;
+    
+    @Column(name="first_name")
     private String firstName;
+    
+    @Column(name="last_name")
     private String lastName;
+    
+    @Column(name="tel")
     private String tel;
+    
     private String email;
     
     public User() {}
