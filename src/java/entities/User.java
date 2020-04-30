@@ -8,18 +8,21 @@ package entities;
 import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
+ 
 /**
  *
  * @author mac
  */
 @Entity
-@Table(name="Users")
+@Table(name="users")
 public class User implements Serializable {
     @Id
-    private long id;
+    @GeneratedValue(strategy=GenerationType.AUTO)
+    private int id;
     
     @Column(name="first_name")
     private String firstName;
